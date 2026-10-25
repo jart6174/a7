@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f2f6fb;
+  color: #1d3048;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.hero {
+  padding: 42px 20px;
+  text-align: center;
+  color: white;
+  background: #173f70;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+.eyebrow {
+  letter-spacing: .18em;
+  font-size: .8rem;
+  color: #bfe5ff;
+}
+
+.nav {
+  padding: 16px;
+  text-align: center;
+  background: #dcebf8;
+}
+
+.nav a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 6px 10px;
+  color: #174d70;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.nav a:hover {
+  background: #c1dff3;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 20px;
+}
+
+h2 {
+  color: #174d70;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.features {
+  display: flex;
+  gap: 18px;
+  justify-content: space-evenly;
+}
+
+.feature {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 5px 18px #173f7015;
+}
+
+.symbol {
+  color: #287a9b;
+  font-size: 2rem;
+}
+
+.feature h3 {
+  margin-bottom: 6px;
+}
+
+.feature p {
+  margin-top: 0;
+  color: #5b6c7d;
+}
+
+.gallery-section {
+  margin-top: 36px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.gallery-item {
+  min-height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+.sky { background: #4c91c8; }
+.ocean { background: #176b87; }
+.forest { background: #34765a; }
+.sunset { background: #c96d4d; }
+.night { background: #343b70; }
+.dawn { background: #b98b56; }
+
+.about {
+  margin-top: 32px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  color: #5b6c7d;
+}
+
+@media (max-width: 700px) {
+  .features {
+    flex-wrap: wrap;
+  }
+  .feature {
+    flex-basis: calc(50% - 9px);
+  }
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 430px) {
+  .feature {
+    flex-basis: 100%;
+  }
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
